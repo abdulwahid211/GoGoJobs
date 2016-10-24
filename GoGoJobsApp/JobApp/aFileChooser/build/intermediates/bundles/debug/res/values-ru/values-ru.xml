@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/mdAbdulWahid/Desktop/mycodes/Final_Project/final_year_project_jobApp/JobApp/aFileChooser/src/main/res/values-ru/strings.xml -->
+    <!-- From: file:/Users/mdAbdulWahid/Desktop/mycodes/ProjectApp/GoGoJobs/GoGoJobsApp/JobApp/aFileChooser/src/main/res/values-ru/strings.xml -->
     <eat-comment/>
     <string name="choose_file">Выберите файл</string>
     <string name="empty_directory">Пустая папка</string>
