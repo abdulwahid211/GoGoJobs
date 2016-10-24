@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/ -->
+    <gradient
+        android:startColor="#fbecd6"
+        android:centerColor="#FFF3D1"
+        android:endColor="#FFF3D1"
+        android:angle="270" />
+</shape>
+
+

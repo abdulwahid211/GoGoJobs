@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/mdAbdulWahid/Desktop/mycodes/Final_Project/final_year_project_jobApp/JobApp/aFileChooser/src/main/res/values-v19/bool.xml -->
+    <eat-comment/>
+    <bool name="use_activity">false</bool>
+    <bool name="use_provider">true</bool>
+</resources>

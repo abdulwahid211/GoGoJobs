@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF3D1" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="619dp" >
+
+        <EditText
+            android:id="@+id/jbtitle"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:hint=" Interview Time"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView17"
+            android:layout_centerHorizontal="true" />
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="#fc6260"
+            android:text="Book an Interview"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:onClick="SubmitButton"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="101dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time "
+            android:id="@+id/buttonTime"
+            android:textColor="#5A2322"
+            android:background="@drawable/forms4"
+            android:textStyle="bold"
+
+            android:onClick="SetInterviewTime"
+            android:layout_below="@+id/jbtitle"
+            android:layout_alignLeft="@+id/jbtitle"
+            android:layout_alignStart="@+id/jbtitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please set your Interview Time"
+            android:id="@+id/textView17"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/jbtitle"
+            android:layout_alignStart="@+id/jbtitle"
+            android:layout_marginTop="37dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please set your Interview Date"
+            android:id="@+id/textView18"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@+id/buttonTime"
+            android:layout_alignLeft="@+id/buttonTime"
+            android:layout_alignStart="@+id/buttonTime" />
+
+        <EditText
+            android:id="@+id/type"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:hint=" Interview Date"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView18"
+            android:layout_alignLeft="@+id/buttonTime" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:id="@+id/buttondate"
+            android:textColor="#5A2322"
+
+            android:textStyle="bold"
+            android:background="@drawable/forms4"
+            android:onClick="SetInterviewDate"
+            android:layout_below="@+id/type"
+            android:layout_alignLeft="@+id/buttonTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Interview Duration"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:id="@+id/textView19"
+            android:layout_below="@+id/buttondate"
+            android:layout_alignLeft="@+id/buttondate"
+            android:layout_alignStart="@+id/buttondate" />
+
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:hint=" Time Duration"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView19"
+            android:layout_alignLeft="@+id/buttondate" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default Address"
+            android:id="@+id/defff"
+            android:layout_below="@+id/duration"
+            android:onClick="defaulCheck"
+            android:layout_alignLeft="@+id/duration"
+            android:layout_alignStart="@+id/duration"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="FirstLine Address"
+            android:id="@+id/textView20"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@+id/defff"
+            android:layout_alignLeft="@+id/defff"
+            android:layout_alignStart="@+id/defff" />
+
+        <EditText
+            android:id="@+id/firstaddress"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView20"
+            android:layout_alignLeft="@+id/defff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="SecondLine Address"
+            android:id="@+id/textView21"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@+id/firstaddress"
+            android:layout_alignLeft="@+id/firstaddress"
+            android:layout_alignStart="@+id/firstaddress" />
+
+        <EditText
+            android:id="@+id/secondaddress"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView21"
+            android:layout_alignLeft="@+id/firstaddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Post Code"
+            android:id="@+id/textView22"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@+id/secondaddress"
+            android:layout_alignLeft="@+id/secondaddress"
+            android:layout_alignStart="@+id/secondaddress" />
+
+        <EditText
+            android:id="@+id/postcode"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView22"
+            android:layout_alignLeft="@+id/secondaddress" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

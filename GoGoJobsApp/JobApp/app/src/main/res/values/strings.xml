@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">GoGo Jobs</string>
+    <string name="action_searc">Hello world!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">Title of the job...</string>
+
+
+    <string name="mile_prompt">Select certain Mile</string>
+
+    <string name="type_prompt">Select Job Type</string>
+
+    <string-array name="mile_arrays">
+        <item>2 Mile</item>
+        <item>4 Mile</item>
+        <item>6 Mile</item>
+        <item>8 Mile</item>
+        <item>10 Mile</item>
+        <item>Everything</item>
+    </string-array>
+
+    <string-array name="type_arrays">
+        <item>Accounting</item>
+        <item>Admin</item>
+        <item>Banking And Finance</item>
+        <item>Education</item>
+        <item>Cafe</item>
+        <item>Bar</item>
+        <item>Government</item>
+        <item>Health Care</item>
+        <item>Hospitality</item>
+        <item>Human Resources</item>
+        <item>ICT</item>
+        <item>Internships</item>
+        <item>Manufactor</item>
+        <item>Volunteer</item>
+        <item>Sales And Marketing</item>
+        <item>Retail</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="mile_run">
+        <item>2 Mile</item>
+        <item>4 Mile</item>
+        <item>6 Mile</item>
+    </string-array>
+</resources>

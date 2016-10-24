@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+
+
+    <!-- Title Of Song -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Sales Assistant "
+        android:textColor="#202020"
+        android:textSize="18dip"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/dateposted"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:textStyle="bold"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Date Created: 12/3/17"
+        android:textColor="#410011"
+        android:textSize="14dip" />
+
+    <!-- Rightend Duration -->
+
+
+    <!-- Rightend Arrow -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/jobtype"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#410011"
+        android:textSize="14dip"
+        android:textStyle="bold"
+        android:text="Sector Type: Education"
+        android:layout_below="@+id/dateposted"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+
+</RelativeLayout>

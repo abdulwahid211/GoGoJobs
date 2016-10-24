@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="419dp" >
+
+        <EditText
+            android:id="@+id/jbtitle"
+            android:layout_width="520dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="195dp"
+            android:background="#3288a4"
+            android:ems="10"
+            android:hint="Please enter Id"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download File "
+            android:onClick="LoginButton"
+            android:id="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:layout_below="@+id/jbtitle" />
+
+    </RelativeLayout>
+
+</ScrollView>

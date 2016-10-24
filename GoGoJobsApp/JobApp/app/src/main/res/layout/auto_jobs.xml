@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="500dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="610dp" >
+
+    <TextView
+        android:layout_width="446dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please select your job type preferences?"
+        android:id="@+id/textView23"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/checkBox23"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accounting"
+            android:id="@+id/checkBox5"
+            android:onClick="accounting"
+            android:layout_below="@+id/textView23"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Government"
+            android:id="@+id/checkBox6"
+            android:onClick="Government"
+            android:layout_below="@+id/textView23"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:onClick="Admin"
+            android:id="@+id/checkBox7"
+            android:layout_below="@+id/checkBox5"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Care"
+            android:onClick="Health_Care"
+            android:id="@+id/checkBox8"
+            android:layout_alignBottom="@+id/checkBox7"
+            android:layout_alignLeft="@+id/checkBox6"
+            android:layout_alignStart="@+id/checkBox6"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banking &amp; Finance"
+            android:onClick="BankingFinance"
+            android:id="@+id/checkBox9"
+            android:layout_below="@+id/checkBox7"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospitality"
+            android:id="@+id/checkBox10"
+            android:onClick="Hospitality"
+            android:layout_below="@+id/checkBox8"
+            android:layout_alignLeft="@+id/checkBox8"
+            android:layout_alignStart="@+id/checkBox8"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office"
+            android:id="@+id/checkBox11"
+            android:checked="false"
+            android:layout_alignTop="@+id/checkBox12"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Human Resources"
+            android:id="@+id/checkBox12"
+            android:layout_below="@+id/checkBox10"
+            android:layout_alignLeft="@+id/checkBox10"
+            android:layout_alignStart="@+id/checkBox10"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media"
+            android:id="@+id/checkBox13"
+            android:layout_below="@+id/checkBox11"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ICT"
+            android:id="@+id/checkBox14"
+            android:layout_below="@+id/checkBox12"
+            android:layout_alignLeft="@+id/checkBox12"
+            android:layout_alignStart="@+id/checkBox12"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox15"
+            android:layout_below="@+id/checkBox13"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:text="Customer Service" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Internships"
+            android:id="@+id/checkBox16"
+            android:layout_below="@+id/checkBox14"
+            android:layout_alignLeft="@+id/checkBox14"
+            android:layout_alignStart="@+id/checkBox14"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant"
+            android:id="@+id/checkBox17"
+            android:layout_below="@+id/checkBox15"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manufactor"
+            android:id="@+id/checkBox18"
+            android:layout_below="@+id/checkBox16"
+            android:layout_alignLeft="@+id/checkBox16"
+            android:layout_alignStart="@+id/checkBox16"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Engineering"
+            android:id="@+id/checkBox19"
+            android:layout_below="@+id/checkBox17"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:layout_alignRight="@+id/checkBox15"
+            android:layout_alignEnd="@+id/checkBox15" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Education"
+            android:id="@+id/checkBox20"
+            android:layout_below="@+id/checkBox19"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volunteer"
+            android:id="@+id/checkBox21"
+            android:layout_below="@+id/checkBox18"
+            android:layout_alignLeft="@+id/checkBox18"
+            android:layout_alignStart="@+id/checkBox18"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cafe"
+            android:id="@+id/checkBox22"
+            android:layout_below="@+id/checkBox21"
+            android:layout_alignLeft="@+id/checkBox21"
+            android:layout_alignStart="@+id/checkBox21"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retail"
+            android:id="@+id/checkBox23"
+            android:layout_below="@+id/checkBox22"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sales &amp; Marketing"
+            android:id="@+id/checkBox24"
+            android:layout_below="@+id/checkBox22"
+            android:layout_alignLeft="@+id/checkBox22"
+            android:layout_alignStart="@+id/checkBox22"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science"
+            android:id="@+id/checkBox25"
+            android:layout_below="@+id/checkBox23"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar"
+            android:id="@+id/checkBox26"
+            android:layout_below="@+id/checkBox24"
+            android:layout_alignLeft="@+id/checkBox24"
+            android:layout_alignStart="@+id/checkBox24"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any type"
+            android:textColor="#b02944"
+            android:textStyle="bold"
+            android:id="@+id/checkBox27"
+            android:checked="false"
+            android:layout_below="@+id/checkBox25"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:id="@+id/checkBox28"
+            android:layout_alignTop="@+id/checkBox27"
+            android:layout_alignLeft="@+id/checkBox26"
+            android:layout_alignStart="@+id/checkBox26"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Select Mile raduis"
+            android:textSize="20dp"
+            android:id="@+id/textView25"
+            android:layout_below="@+id/clear"
+            android:layout_toRightOf="@+id/checkBox20"
+            android:layout_toEndOf="@+id/checkBox20" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="#f0eae4"
+            android:entries="@array/mile_run"
+            android:prompt="@string/mile_prompt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView25"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/clear"
+            android:textStyle="bold"
+            android:onClick="clear"
+
+            android:background="@drawable/forms4"
+            android:layout_below="@+id/checkBox27"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:text="Find Jobs"
+            android:id="@+id/button7"
+            android:onClick="findJob"
+
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/forms4"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/spinner"
+            android:layout_toStartOf="@+id/checkBox28"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/button9"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            android:background="@drawable/forms4"
+            android:onClick="stopJob"
+            android:layout_below="@+id/button7"
+            android:layout_alignLeft="@+id/button7"
+            android:layout_alignStart="@+id/button7" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

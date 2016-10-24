@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="619dp" >
+
+        <EditText
+            android:id="@+id/jbtitle"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="38dp"
+            android:hint="Titile of the job"
+            android:background="#3288a4"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:textStyle="bold"
+            android:hint="salary"
+            android:background="#3288a4"
+            android:layout_below="@+id/jbtitle"
+            android:layout_alignLeft="@+id/jbtitle"
+            android:layout_alignStart="@+id/jbtitle" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:freezesText="true"
+            android:textStyle="bold"
+            android:background="#3288a4"
+            android:hint="Contract Part time or full time"
+            android:layout_below="@+id/firstname"
+            android:layout_alignRight="@+id/firstname"
+            android:layout_alignEnd="@+id/firstname"
+            android:layout_alignLeft="@+id/firstname"
+            android:layout_alignStart="@+id/firstname">
+
+
+        </EditText>
+
+
+
+        <EditText
+            android:id="@+id/postcode"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:textStyle="bold"
+            android:background="#3288a4"
+            android:hint="your Postcode"
+            android:layout_below="@+id/lastname"
+            android:layout_alignRight="@+id/lastname"
+            android:layout_alignEnd="@+id/lastname"
+            android:layout_alignLeft="@+id/lastname"
+            android:layout_alignStart="@+id/lastname" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:textStyle="bold"
+            android:hint="City name etc london"
+            android:background="#3288a4"
+            android:layout_below="@+id/postcode"
+            android:layout_alignRight="@+id/postcode"
+            android:layout_alignEnd="@+id/postcode"
+            android:layout_alignLeft="@+id/postcode"
+            android:layout_alignStart="@+id/postcode" />
+
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:background="#3288a4"
+            android:textStyle="bold"
+            android:hint="Description of the job"
+            android:layout_below="@+id/city"
+            android:layout_alignRight="@+id/city"
+            android:layout_alignEnd="@+id/city"
+            android:layout_alignLeft="@+id/city"
+            android:layout_alignStart="@+id/city" />
+
+        <Button
+            android:id="@+id/postbutton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:background="#D58319"
+            android:text="Post Vacancy"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:onClick="PostButton"
+            android:textStyle="bold"
+            android:layout_alignRight="@+id/description"
+            android:layout_alignEnd="@+id/description"
+            android:layout_alignLeft="@+id/description"
+            android:layout_alignStart="@+id/description"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

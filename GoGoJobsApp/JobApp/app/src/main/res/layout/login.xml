@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gogobackground" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="619dp" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:background="@drawable/forms2"
+            android:ems="10"
+            android:hint="  Username"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/fonttitle"
+            android:src="@drawable/title"
+            android:layout_width="300dp"
+            android:layout_height="140dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:background="@drawable/forms2"
+            android:textStyle="bold"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:background="#ffffff"
+            android:textColor="#1a1a1a"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:onClick="RegisterButton"
+            android:layout_marginBottom="79dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@drawable/forms3"
+            android:onClick="LoginButton"
+            android:id="@+id/login"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

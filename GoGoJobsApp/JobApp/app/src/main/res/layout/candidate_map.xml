@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Job_seekerMenu"
+    android:background="#f5eacb"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ABC5D9"
+        android:id="@+id/search_jobs"
+        android:hint="Please enter the postCode"
+        />
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/search_jobs" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Number of Candidate: None Applied "
+        android:id="@+id/candidate"
+        android:background="@drawable/forms4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:onClick="findLocation"
+        android:text="Find"
+        android:background="@drawable/forms4"
+        android:id="@+id/postcode_button"
+        />
+
+
+</RelativeLayout>

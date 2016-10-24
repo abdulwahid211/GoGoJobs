@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF3D1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="715dp" >
+
+
+        <EditText
+            android:id="@+id/jbtitle"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint="  Username "
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/type"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint=" Password"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:layout_below="@+id/jbtitle"
+            android:layout_alignLeft="@+id/jbtitle"
+            android:layout_alignStart="@+id/jbtitle" />
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint="  FirstName"
+            android:layout_below="@+id/type"
+            android:layout_alignLeft="@+id/type"
+            android:layout_alignStart="@+id/type" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  LastName"
+            android:layout_below="@+id/firstname"
+            android:layout_alignLeft="@+id/firstname"
+            android:layout_alignStart="@+id/firstname" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  Email"
+            android:layout_below="@+id/lastname"
+            android:layout_alignLeft="@+id/lastname"
+            android:layout_alignStart="@+id/lastname" />
+
+        <EditText
+            android:id="@+id/telephone"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  Telephone"
+            android:layout_below="@+id/email"
+            android:layout_alignLeft="@+id/email"
+            android:layout_alignStart="@+id/email" />
+
+
+
+        <Button
+            android:layout_width="390dp"
+            android:layout_height="60dp"
+            android:text=" Submit"
+            android:background="#fc6260"
+            android:textColor="#ffffff"
+            android:textSize="19dp"
+            android:onClick="SubmitButton"
+            android:textStyle="bold"
+            android:id="@+id/button10"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  Mobile"
+            android:layout_below="@+id/telephone"
+            android:layout_alignLeft="@+id/telephone"
+            android:layout_alignStart="@+id/telephone" />
+
+        <EditText
+            android:id="@+id/companyName"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint="  Your Company Name"
+            android:layout_below="@+id/mobile"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/firstnamelineaddress"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint="  First Line Address"
+            android:layout_below="@+id/companyName"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/secondlineaddress"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  Second Line Address"
+            android:layout_below="@+id/firstnamelineaddress"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/town"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  Town"
+            android:layout_below="@+id/secondlineaddress"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/postcode"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/forms"
+            android:ems="10"
+            android:hint="  Postcode"
+            android:layout_below="@+id/town"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+   
+
+    <!-- Title Of Song -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Sales Assistant "
+        android:textColor="#040404"
+        android:textSize="18dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/comapanyname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Big Sams Shop"
+        android:textColor="#343434"
+        android:textSize="14dip" />
+
+    <!-- Rightend Duration -->
+
+
+    <!-- Rightend Arrow -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/salpostcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="14dip"
+        android:textStyle="bold"
+        android:text="£19,000 a year, SE1 67H"
+        android:layout_below="@+id/comapanyname"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="POSTED: 12/4/16"
+        android:textStyle="bold"
+        android:id="@+id/datePosted"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Job_seekerMenu"
+
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/forms2"
+        android:textStyle="bold"
+        android:id="@+id/search_jobs"
+        android:hint="  Please enter title of the job"
+        />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+       >
+    </ListView>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+
+
+        />
+
+
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:textStyle="bold"
+        android:background="@drawable/forms4"
+        android:id="@+id/mapButton"
+        android:onClick="MapView"
+         />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="List"
+        android:textStyle="bold"
+        android:background="@drawable/forms4"
+        android:id="@+id/listButton"
+        android:onClick="ListView"
+       />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="findLocation"
+        android:text="Find"
+        android:textStyle="bold"
+        android:background="@drawable/forms4"
+        android:id="@+id/postcode_button"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jobapp.mdabdulwahid.jobapp" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".JobSeekerMenu.searchActivity" />
+
+        <activity
+            android:name=".LoginDetails.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".Register.Register_Employer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".JobSeekerMenu.autoJobs"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+        <activity
+            android:name=".Register.Register_Job_seeker"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
+        <activity
+            android:name=".EmployerMenu.InterviewInvitation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".JobSeekerMenu.uploadFile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginDetails.chooseAccount"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".Profiles.VacancyEmployerProfile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EmployerMenu.EmployerMenu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Profiles.CandidateProfile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".JobSeekerMenu.Job_seekerMenu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".JobSeekerMenu.applicationForm"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+        <activity
+            android:name=".EmployerMenu.MyVacancies"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EmployerMenu.listCandidatesMap"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".EmployerMenu.postJobs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+        <activity
+            android:name=".JobSeekerMenu.SearchJobMap"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".Profiles.VacancyProfile"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB3ZAxf9jQGqbUCi1RhQYM3w9sHNEqFsUk"/>
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+
+        <provider
+            android:name="com.ianhanniballake.localstorage.LocalStorageProvider"
+            android:authorities="com.ianhanniballake.localstorage.documents"
+            android:enabled="@bool/use_provider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS" >
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+
+
+        <service android:name=".JobSeekerMenu.AutoJobsService" />
+
+    </application>
+
+</manifest>
