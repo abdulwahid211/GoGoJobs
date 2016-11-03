@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -32,7 +33,7 @@ import jobapp.mdabdulwahid.jobapp.Objects.Job_seeker;
 import jobapp.mdabdulwahid.jobapp.Objects.Vacancy;
 import jobapp.mdabdulwahid.jobapp.Profiles.VacancyProfile;
 import jobapp.mdabdulwahid.jobapp.R;
-
+import android.app.Notification
 
 // The AutoJobsService inherits Service class to ensure the operation of the class runs on
 // on the background
@@ -153,8 +154,21 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
                 .setWhen(System.currentTimeMillis())  // the time to be shown in the android device
                 .setContentTitle("GoGo Job match")  // the label of the entry notification
                 .setContentText("Job Title: " + vacancy.getJob_title())  // the contents of the entry
+                .setGroup("GROUP_KEY_MESSAGES")
+                .setGroupSummary(true)
                 .setContentIntent(pending)  // The intent to send when the entry is clicked
                 .build(); // finally build the notification object
+
+
+        private NotificationCompat.Builder createHeaderBuilder() {
+            return new NotificationCompat.Builder(this)
+                    .setColor(Color.GREEN) // use the green color (a value is needed! Not a resource)
+                    .setContentTitle(getString(R.string.app_name)) // 'GCM Webhooks' in the example text
+                    .setSmallIcon(R.drawable.notification_template_icon_bg) // white and transparent logo (the 'C')
+                    .setGroupSummary(true) // important: This is a summary, aka header
+                    .setGroup("Apple "); // important: Always use the same group,
+            // otherwise you'll get multiple notifications
+        }
 
         //  send that notification object on the screen
         notificationPushObject.notify(uniqueNotificationIndex, notification);
@@ -179,15 +193,15 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, currentLocationRequest, this);
         // pause the execution if the activity is not being used
 
-        new RetrieveAllVacancies().execute();
-
-
+       // new RetrieveAllVacancies().execute();
         // First a ScheduledExecutorService is created with 5 threads within
         scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
         // the last parameters specify a inner main runnable thread to
         // execute after every 10 seconds
         scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
+
             public void run() {
+                new RetrieveAllVacancies().execute();
             }
         }, 0, 10, TimeUnit.SECONDS); // after every 10 seconds
 
@@ -241,7 +255,9 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
             double lng = add.getLongitude();
             // if the user has selected the job preference as any tpe
             // just show that notification of that particular vacancy
+
             if (userChoice.get(0).equals("Any type")) {
+
                 showNotification(vacancies.get(i), i);
             }
             // if not
@@ -328,10 +344,13 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
             // receive the values from php response
             // the php response would contain JSON data
             // JSON data contains all job detail
+            notificationPushObject.cancelAll();
             vacancies = (ArrayList) vacanciesListJSON.parseFeed(result, "vacancyDetail");
 
 
-            vacancies =  removeDuplication( vacancies);
+            //vacancies =  removeDuplication( vacancies);
+
+
         }
 
 
