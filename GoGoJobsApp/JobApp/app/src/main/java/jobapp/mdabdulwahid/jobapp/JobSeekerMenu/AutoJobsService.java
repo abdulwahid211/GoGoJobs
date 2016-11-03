@@ -286,7 +286,7 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
         @Override
         protected void onPreExecute() {
         }
-        // doInBackground to execute the actual operation in the background
+        // doInBackground to execute the actual operation in the background //test
         @Override
         protected String doInBackground(String... param) {
             // executes request to the php script
