@@ -21,6 +21,9 @@ import com.google.android.gms.location.LocationServices;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import jobapp.mdabdulwahid.jobapp.DataTransfer.HttpTransferData;
 import jobapp.mdabdulwahid.jobapp.DataTransfer.TransferPackage;
@@ -58,7 +61,8 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
     private ArrayList<String> userChoice;
     private Geocoder geocoder;
     private int mile = 0;
-
+    private ArrayList<Vacancy> uniqueVacancies;
+    ScheduledExecutorService scheduleTaskExecutor;
 
     // must default override method
     // returning nothing
@@ -88,7 +92,7 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
                 .build();
         mGoogleApiClient.connect();// execute the connections
 
-
+        uniqueVacancies = new ArrayList<Vacancy>();
         vacancies = new ArrayList<Vacancy>();
         vacanciesListJSON = new VacanciesListJSON();
         // to access all geolocation feature for the GoGo jobs map
@@ -173,10 +177,20 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
         // finally using location service API update the GoogleMapAPI and locationRequest Object
         // this enables to receive the best quality service locations
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, currentLocationRequest, this);
+        // pause the execution if the activity is not being used
 
-
-        //execute the Async task object background  to retrieve all jobs from the database
         new RetrieveAllVacancies().execute();
+
+
+        // First a ScheduledExecutorService is created with 5 threads within
+        scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
+        // the last parameters specify a inner main runnable thread to
+        // execute after every 10 seconds
+        scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
+            public void run() {
+            }
+        }, 0, 10, TimeUnit.SECONDS); // after every 10 seconds
+
 
     }
 
@@ -265,6 +279,21 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
         return (dist);
     }
 
+    public ArrayList<Vacancy>  removeDuplication(ArrayList<Vacancy> vacancies){
+
+        for(int i=0; i<vacancies.size();i++){
+
+
+            if(!uniqueVacancies.contains(vacancies.get(i))){
+                uniqueVacancies.add(vacancies.get(i));
+            }
+        }
+
+
+
+        return uniqueVacancies;
+    }
+
     //Other two mathematical methods from GeodataSource that helps to convert decimal
     // degrees to radians and radians to decimal degrees.
     // These two methods are used in the distance function to help calculate distance
@@ -300,6 +329,9 @@ public class AutoJobsService extends Service implements GoogleApiClient.Connecti
             // the php response would contain JSON data
             // JSON data contains all job detail
             vacancies = (ArrayList) vacanciesListJSON.parseFeed(result, "vacancyDetail");
+
+
+            vacancies =  removeDuplication( vacancies);
         }
 
 
